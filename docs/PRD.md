@@ -112,7 +112,69 @@ Key promises:
 - Avoid vendor, model, cloud, framework, and language lock-in
 - Start open source with AGenNext and scale enterprise-wide with Rize
 
-## 7. Product Principles
+## 7. Competitive Landscape
+
+Rize competes with the major AI and agent development platforms enterprises are already evaluating, including Anthropic Platform, OpenAI Platform, LangChain plus LangSmith, Google Vertex AI, Azure AI Foundry, and AWS Bedrock.
+
+Rize should not position itself as simply another model API, agent framework, or cloud-native AI service. Instead, Rize should position as the neutral enterprise agent control plane for organizations that need to standardize, govern, evaluate, deploy, and operate agents across multiple models, frameworks, clouds, tools, and languages.
+
+### Competitive Categories
+
+#### Model Provider Platforms
+
+Examples:
+
+- Anthropic Platform
+- OpenAI Platform
+
+These platforms are strong model and API providers. They provide powerful models, developer APIs, tooling, and model-specific capabilities. However, enterprises using them may still need a neutral lifecycle and governance layer across many providers, frameworks, clouds, internal tools, and deployment environments.
+
+Rize should integrate with these platforms rather than require customers to replace them.
+
+#### Framework and Observability Platforms
+
+Examples:
+
+- LangChain
+- LangSmith
+
+These platforms are strong for agent development, orchestration, tracing, debugging, and evaluation workflows, especially for teams already building in the LangChain ecosystem. However, enterprises may need broader framework-neutral governance, deployment, approval, and operational controls across multiple agent stacks.
+
+Rize should support LangChain and LangSmith users while providing a broader enterprise control plane that is not tied to a single framework ecosystem.
+
+#### Cloud AI Platforms
+
+Examples:
+
+- Google Vertex AI
+- Azure AI Foundry
+- AWS Bedrock
+
+These platforms are strong cloud-native AI platforms with managed infrastructure, model access, security integration, and deployment capabilities. However, enterprises often operate across multiple clouds, hybrid environments, and internal platforms. They may also want to avoid being locked into one cloud provider's agent, model, deployment, or governance layer.
+
+Rize should integrate with cloud AI platforms while providing a cloud-agnostic control layer across environments.
+
+### Rize Positioning Against Competitors
+
+Rize wins when the customer needs:
+
+- Any model, not one model provider
+- Any framework, not one agent framework
+- Any cloud, not one infrastructure provider
+- Any language, not one SDK or runtime
+- Any tool ecosystem, not one plugin marketplace
+- Enterprise governance across teams, environments, and business units
+- Evaluation and release controls before production deployment
+- Production operations across heterogeneous agent systems
+- A path from open-source adoption through AGenNext to enterprise scale through Rize
+
+### Competitive Positioning Statement
+
+For enterprises building production AI agents across multiple models, frameworks, tools, clouds, and teams, AutonomyX Rize is the enterprise agent control plane that standardizes the full agent lifecycle: build, test, evaluate, deploy, operate, and govern.
+
+Unlike Anthropic Platform or OpenAI Platform, Rize is not tied to a single model provider. Unlike LangChain and LangSmith, Rize is not tied to a single framework ecosystem. Unlike Google Vertex AI, Azure AI Foundry, or AWS Bedrock, Rize is not tied to a single cloud. Rize is designed to sit above and integrate with all of them.
+
+## 8. Product Principles
 
 1. Open by design: support heterogeneous frameworks, models, tools, languages, and clouds.
 2. Open-source foundation: AGenNext should make core agent lifecycle capabilities available to the community.
@@ -123,9 +185,9 @@ Key promises:
 7. Developer-friendly: meet developers where they are rather than forcing a single stack.
 8. Extensible: integrate with existing enterprise systems, tools, and workflows.
 
-## 8. Key Capabilities
+## 9. Key Capabilities
 
-### 8.1 Build
+### 9.1 Build
 
 Rize and AGenNext should allow teams to create and manage agents across different frameworks and languages.
 
@@ -139,7 +201,7 @@ Requirements:
 - Enable versioning of agent definitions, prompts, tools, configs, and policies
 - Provide open-source developer workflows through AGenNext
 
-### 8.2 Test
+### 9.2 Test
 
 Rize and AGenNext should provide structured testing environments for agent behavior.
 
@@ -152,7 +214,7 @@ Requirements:
 - Detect regressions in behavior, latency, cost, safety, and reliability
 - Allow local and CI-based test execution in AGenNext
 
-### 8.3 Evaluate
+### 9.3 Evaluate
 
 Rize and AGenNext should provide robust evaluation capabilities for enterprise readiness.
 
@@ -166,7 +228,7 @@ Requirements:
 - Integrate evaluation into CI/CD and release workflows
 - Support open evaluation workflows in AGenNext and governed evaluation workflows in Rize
 
-### 8.4 Deploy
+### 9.4 Deploy
 
 Rize and AGenNext should support flexible deployment across environments.
 
@@ -180,7 +242,7 @@ Requirements:
 - Support environment-specific configuration and secrets management
 - Provide portable deployment patterns in AGenNext and enterprise deployment orchestration in Rize
 
-### 8.5 Operate
+### 9.5 Operate
 
 Rize should provide runtime observability and control for deployed agents. AGenNext should provide the open telemetry and runtime data foundation where appropriate.
 
@@ -193,7 +255,7 @@ Requirements:
 - Provide production health dashboards
 - Enable policy enforcement and runtime guardrails
 
-### 8.6 Govern
+### 9.6 Govern
 
 Rize should provide enterprise governance for agent adoption. AGenNext should expose policy hooks and metadata foundations that Rize can enforce at enterprise scale.
 
@@ -209,7 +271,7 @@ Requirements:
 - Environment-level permissions
 - Open metadata and policy interfaces for AGenNext
 
-## 9. Non-Goals for Initial Version
+## 10. Non-Goals for Initial Version
 
 The initial version of Rize and AGenNext should not attempt to:
 
@@ -218,8 +280,9 @@ The initial version of Rize and AGenNext should not attempt to:
 - Replace existing CI/CD, identity, observability, or governance systems
 - Become a generic chatbot builder without enterprise lifecycle controls
 - Make all enterprise-only governance and compliance features part of the open-source distribution by default
+- Replace Anthropic, OpenAI, LangChain, LangSmith, Vertex AI, Azure AI Foundry, or AWS Bedrock where enterprises already use them successfully
 
-## 10. Differentiation
+## 11. Differentiation
 
 Rize differentiates by being an enterprise-neutral agent lifecycle platform rather than a single-stack agent builder.
 
@@ -236,8 +299,9 @@ Differentiators:
 - Enterprise control plane through Rize
 - Full lifecycle coverage: build, test, evaluate, deploy, operate, govern
 - Designed for enterprise-grade scale, security, and compliance
+- Integrates with existing AI platforms instead of forcing rip-and-replace adoption
 
-## 11. Initial MVP Scope
+## 12. Initial MVP Scope
 
 The MVP should focus on creating a usable open-source foundation through AGenNext and a clear enterprise upgrade path through Rize.
 
@@ -278,7 +342,7 @@ The MVP should focus on creating a usable open-source foundation through AGenNex
 8. Rize manages approvals, environments, access, audit logs, traces, metrics, and lifecycle governance.
 9. Future versions are compared, promoted, or rolled back through Rize.
 
-## 12. Success Metrics
+## 13. Success Metrics
 
 Product success should be measured by:
 
@@ -304,7 +368,7 @@ Product success should be measured by:
 - Number of governed deployments
 - Conversion from AGenNext usage to Rize enterprise adoption
 
-## 13. Open Questions
+## 14. Open Questions
 
 - Which agent frameworks should be supported first?
 - Which clouds should be prioritized for MVP deployment?
@@ -316,8 +380,9 @@ Product success should be measured by:
 - What compliance standards should be prioritized first?
 - What license should AGenNext use?
 - How should AGenNext community contributions flow into Rize?
+- Which competitor integrations should be prioritized first: model providers, cloud AI platforms, or framework ecosystems?
 
-## 14. Glossary
+## 15. Glossary
 
 - Agent: An AI-powered software system that can reason, call tools, interact with systems, and complete tasks.
 - AGenNext: The open-source version of Rize and community foundation for framework-agnostic agent lifecycle management.
