@@ -1,0 +1,2 @@
+the work os for enteprrises
+Flow - Admin Sign up - SSO Integraton - get list of apps and employees - build tools for all apps using apis if official mcp does not exisit. docker desktop to run mcps and models locally , docker model run, each user get a mail to build their own agen using langflow visual builder. their own rag by anything llm, own developer using open hands and own notebook using open notebook. use onyl reference upstream repo, do not fork, each user get chat using librechat
