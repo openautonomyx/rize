@@ -1,2 +1,40 @@
-the work os for enteprrises
-Flow - Admin Sign up - SSO Integraton - get list of apps and employees - build tools for all apps using apis if official mcp does not exisit. docker desktop to run mcps and models locally , docker model run, each user get a mail to build their own agen using langflow visual builder. their own rag by anything llm, own developer using open hands and own notebook using open notebook. use onyl reference upstream repo, do not fork, each user get chat using librechat
+# Rize (AGenNext Foundation)
+
+This repository now includes an initial implementation of the **Agent Project Manifest** capability from the PRD MVP.
+
+## Included MVP feature
+
+- Framework-agnostic agent manifest model (`AgentManifest`)
+- Manifest field validation for required metadata
+- CLI command to validate manifest files: `rize-manifest <path>`
+- Unit tests for manifest loading and validation behavior
+
+## Quickstart
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .[dev]
+pytest
+```
+
+## Example manifest
+
+```json
+{
+  "name": "expense-approvals-agent",
+  "version": "0.1.0",
+  "framework": "langgraph",
+  "runtime": "python3.12",
+  "model_provider": "openai",
+  "model": "gpt-4.1",
+  "tools": ["workday", "slack"],
+  "owners": ["team@example.com"]
+}
+```
+
+Validate it:
+
+```bash
+rize-manifest ./manifest.json
+```
