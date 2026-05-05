@@ -38,3 +38,23 @@ Validate it:
 ```bash
 rize-manifest ./manifest.json
 ```
+
+## Docker
+
+Build the image:
+
+```bash
+docker build -t rize-manifest .
+```
+
+Run manifest validation by mounting your manifest into the container:
+
+```bash
+docker run --rm -v "$PWD":/work -w /work rize-manifest ./manifest.json
+```
+
+Show CLI help:
+
+```bash
+docker run --rm rize-manifest
+```
